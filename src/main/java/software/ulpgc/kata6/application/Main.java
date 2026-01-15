@@ -29,7 +29,7 @@ public class Main {
                 List<String> titles = store.search(yearParam);
 
                 if (titles.isEmpty()){
-                    ctx.status(400).result("No movies found");
+                    ctx.status(404).result("No movies found");
                     return;
                 }
                 ctx.result(String.join("\n", titles));
